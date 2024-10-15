@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
+* {
+	font-family: "Ubuntu Condensed", sans-serif;
+	color: #fff;
+}
+#root {
+	min-width: 75%;
+	margin: 5%;
+}
+body {
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	align-items: center;
+	background-color: rgb(251, 199, 127);
+}
+
+.departures {
+	background-color: rgb(6, 6, 6);
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.flip {
+	visibility: hidden;
+	animation: 0.5s linear flipping forwards;
+	animation-delay: calc(0.5s * var(--i));
+}
+
+@keyframes flipping {
+	0% {
+		visibility: visible;
+		transform: rotateX(0deg);
+	}
+	25% {
+		visibility: visible;
+		transform: rotateX(90deg);
+	}
+	50% {
+		visibility: visible;
+		transform: rotateX(0deg);
+	}
+	75% {
+		visibility: visible;
+		transform: rotateX(90deg);
+	}
+	100% {
+		visibility: visible;
+		transform: rotateX(0deg);
+	}
+}
